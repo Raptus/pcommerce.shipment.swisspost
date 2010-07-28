@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="pcommerce">
+
+  <browser:view
+      for="..interfaces.ISwissPostShipment"
+      class=".shipment.SwissPostShipment"
+      name="shipment"
+      permission="pcommerce.CheckOut"
+      provides="pcommerce.core.interfaces.IShipmentView"
+      />
+      
+  <browser:view
+      for="..interfaces.ISwissPostShipment"
+      class=".overview.SwissPostOverview"
+      name="overview"
+      permission="pcommerce.CheckOut"
+      provides="pcommerce.core.interfaces.IShipmentView"
+      />
+      
+  <browser:view
+      for="..interfaces.ISwissPostShipment"
+      class=".confirmation.SwissPostConfirmation"
+      name="confirmation"
+      permission="pcommerce.CheckOut"
+      provides="pcommerce.core.interfaces.IShipmentView"
+      />
+
+  <browser:resource
+      name="pcommerce_shipment_swisspost_icon.gif"
+      image="icon.gif"
+      />
+
+  <browser:resource
+      name="pcommerce_shipment_swisspost_logo.gif"
+      image="logo.gif"
+      />
+  
+</configure>
