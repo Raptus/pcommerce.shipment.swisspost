@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0b2'
+version = '1.0b3'
 
 setup(name='pcommerce.shipment.swisspost',
       version=version,
@@ -29,5 +29,7 @@ setup(name='pcommerce.shipment.swisspost',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
